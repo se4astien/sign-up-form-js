@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /* Accent */
+  --blue: hsl(248, 32%, 49%);
+  /* Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--red) url('./images/bg-intro-desktop.png') no-repeat center
+    center/cover;
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  color: #fff;
+  padding: 20px;
+  width: 40%;
+}
+
+.hero h1 {
+  line-height: 1.2;
+}
+
+.hero p {
+  color: #f4f4f4;
+  font-size: 12px;
+}
+
+.fill {
+  width: 40%;
+}
+
+.fill .try {
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fill .try span {
+  color: var(--grayish-blue);
+}
+
+.fill form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control input {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--grayish-blue);
+  width: 100%;
+  font-size: 13px;
+}
+
+.form-control input:focus {
+  border: 1px solid var(--dark-blue);
+  outline: none;
+}
+
+.form .submit {
+  cursor: pointer;
+  background-color: var(--green);
+  color: #fff;
+  text-transform: uppercase;
+  border: 0;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.form p {
+  font-size: 11px;
+  color: var(--grayish-blue);
+}
+
+.form-control .error,
+.fill p span,
+.form-control.wrong {
+  color: var(--red);
+}
+
+.form-control.wrong input {
+  border: 1px solid var(--red);
+}
+
+.form-control.right {
+  color: var(--green);
+}
+
+.form-control.right input {
+  border: 1px solid var(--green);
+}
+
+.form-control .error {
+  font-size: 11px;
+  margin: 5px 0;
+  visibility: hidden;
+}
+
+.form-control.wrong .error {
+  visibility: visible;
+}
+
+@media (max-width: 480px) {
+  body {
+    height: 100%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .hero {
+    width: 85%;
+    text-align: center;
+  }
+  .fill {
+    width: 80%;
+  }
+  .form p {
+    text-align: center;
+  }
+}
