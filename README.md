@@ -16,3 +16,4 @@
 https://sign-up-form-js.netlify.app/
 
 ## Screenshot
+<img src="https://github.com/se4astien/sign-up-form-js/blob/master/assets/design/desktop-design.jpg" alt="cover" width="75%" />
